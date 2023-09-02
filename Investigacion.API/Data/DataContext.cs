@@ -7,12 +7,12 @@ namespace Investigacion.API.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public DbSet<ProyectInvest> ProyectIvents { get; set; }
+        public DbSet<ProyectInvest> ProyectInvents { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<ProyectInvest>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<ProyectInvest>().HasIndex(c => c.Id).IsUnique();
         }
 
     }

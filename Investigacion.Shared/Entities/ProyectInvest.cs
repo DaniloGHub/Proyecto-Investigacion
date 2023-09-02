@@ -16,10 +16,10 @@ namespace Investigacion.Shared.Entities
         public string Name { get; set; } = null;
 
         [Required(ErrorMessage = "La fecha de inicio es obligatoria")]
-        public string StartDate { get; set; }
+        public string StartDate { get; set; } = null;
 
         [Required(ErrorMessage = "La fecha de finalización es obligatoria")]
-        public string EndDate { get; set; }
+        public string EndDate { get; set; } = null;
 
         [Required(ErrorMessage = "El nobre del lider es obligatorio")]
         public string Leader { get; set; } = null;
